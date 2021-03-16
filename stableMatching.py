@@ -1,31 +1,15 @@
-# preffered_ranking_men = {
-# 	'R' : ['L', 'S', 'Z', 'D'],
-# 	'J' : ['S', 'L', 'D', 'Z'],
-# 	'B' : ['S', 'D', 'Z', 'L'],
-# 	'C' : ['L', 'S', 'Z', 'D'],
-# }
-
-# preffered_ranking_women = {
-# 	'L' : ['R', 'B', 'J', 'C'],
-# 	'S' : ['R', 'B', 'C', 'J'],
-# 	'Z' : ['C', 'J', 'R', 'B'],
-# 	'D' : ['R', 'J', 'C', 'B'],
-# }
-
 preffered_ranking_men = {
-	'1' : ['C', 'B', 'E', 'A', 'D'],
-	'2' : ['A', 'B', 'E', 'C', 'D'],
-	'3' : ['D', 'C', 'B', 'A', 'E'],
-	'4' : ['A', 'C', 'D', 'B', 'E'],
-	'5' : ['A', 'B', 'D', 'E', 'C']
+	'Ryan' : ['Lizzy', 'Sarah', 'Zoey', 'Daniella'],
+	'Joe' : ['Sarah', 'Lizzy', 'Daniella', 'Zoey'],
+	'Blake' : ['Sarah', 'Daniella', 'Zoey', 'Lizzy'],
+	'Connor' : ['Lizzy', 'Sarah', 'Zoey', 'Daniella'],
 }
 
 preffered_ranking_women = {
-	'A' : ['3', '5', '2', '1', '4'],
-	'B' : ['5', '2', '1', '4', '3'],
-	'C' : ['4', '3', '5', '1', '2'],
-	'D' : ['1', '2', '3', '4', '5'],
-	'E' : ['2', '3', '4', '1', '5']
+	'Lizzy' : ['Ryan', 'Blake', 'Joe', 'Connor'],
+	'Sarah' : ['Ryan', 'Blake', 'Connor', 'Joe'],
+	'Zoey' : ['Connor', 'Joe', 'Ryan', 'Blake'],
+	'Daniella' : ['Ryan', 'Joe', 'Connor', 'Blake'],
 }
 
 tentative_matches = [] # To keep track of the tentative engagements
