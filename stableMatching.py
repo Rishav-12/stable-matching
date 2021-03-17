@@ -12,7 +12,7 @@ preffered_ranking_women = {
 	'Daniella' : ['Ryan', 'Joe', 'Connor', 'Blake'],
 }
 
-tentative_matches = [] # To keep track of the tentative engagements
+tentative_matches = [] # To keep track of the tentative matchings
 free_men = [man for man in list(preffered_ranking_men.keys())] # Initialize the list of free men
 
 def stableMatch():
@@ -29,27 +29,27 @@ def begin_matching(man):
 	'''
 	print(f"Dealing with {man}")
 	for woman in preffered_ranking_men[man]:
-		taken_match = [couple for couple in tentative_matches if woman in couple]
+		taken_match = [pairing for pairing in tentative_matches if woman in pairing]
 
 		if not taken_match:
 			# if the woman is not taken, match her tentatively with the man
 			tentative_matches.append([man, woman])
 			free_men.remove(man)
-			print(f"{man} is tentatively engaged to {woman}")
+			print(f"{man} is tentatively matched to {woman}")
 			break
 
 		else:
-			print(f"{woman} is already taken")
+			print(f"{woman} is already matched")
 			current_partner = preffered_ranking_women[woman].index(taken_match[0][0])
 			potential_partner = preffered_ranking_women[woman].index(man)
 			'''
-			Comapare the ranking of the current guy and the potential guy
+			Compare the ranking of the woman's current partner and the potential partner
 			'''
 			if potential_partner < current_partner:
 				print(f"{man} is more preffered than {taken_match[0][0]}")
-				print(f"Unpair {taken_match[0][0]} and {woman}. Now, {man} is tentatively engaged to {woman}")
+				print(f"Unpair {taken_match[0][0]} and {woman}. Now, {man} is tentatively matched to {woman}")
 
-				# the potential guy is engaged and the current guy is now free
+				# the potential guy is matched and the current guy is now free
 				free_men.remove(man)
 				free_men.append(taken_match[0][0])
 
@@ -60,4 +60,5 @@ def begin_matching(man):
 
 if __name__ == '__main__':
 	stableMatch()
-	print(tentative_matches) # print out the final list of engagements
+	print("\nFINAL PAIRINGS : ")
+	print(*tentative_matches) # print out the final list of matchings
