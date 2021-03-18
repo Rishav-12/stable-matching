@@ -21,3 +21,5 @@ preffered_ranking_women = {
 	'D' : ['1', '2', '3', '4', '5'],
 	'E' : ['2', '3', '4', '1', '5']
 }
+
+This script is inspired by the video regarding Stable Matching by the YouTube channel The Simple Engineer
